@@ -8,8 +8,10 @@
         <title>{{config('APP_NAME','Museum')}}</title>
     </head>
     <body>
-        @include('inc.navbar')
-        <div class="container-fluid">
+        @section('sidebar')
+        @show
+
+        <div class="container">
             @yield('content')
         </div>
     </body>
