@@ -13,7 +13,6 @@ class artobject extends Model
      * @var string
      */
     protected $table = 'art_object';
-
     protected $primaryKey = 'object_id';
 
     /**

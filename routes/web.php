@@ -11,11 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-
+Route::get('/museum', function () {
+    return view('pages.index');
 });
+
+Route::get('/', function () {
+    return view('pages.start');
+});
+Route::get('/login', 'LoginController@form');
 Route::get('/artobject', 'PagesController@artobject');
+Route::get('/painting', 'PagesController@painting');
+Route::get('/sculpture', 'PagesController@sculpture');
+Route::get('/other', 'PagesController@other');
 Route::get('/artist', 'PagesController@artist');
+Route::get('/collection', 'PagesController@collection');
+
+Route::get('/exhibition', 'PagesController@exhibition');
 Route::get('/goers', 'PagesController@goers');
 
